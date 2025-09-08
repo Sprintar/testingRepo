@@ -1,26 +1,25 @@
-# Sprint 5  
+## Release version 5  
 Release Date: 08 Sep 2025  
 
-## Features Released:  
-- **Recursive Delete API for Entities** - Introduced an API endpoint in the `/navai/` namespace to enable recursive deletion of entities like workspaces, assistants, agents, and workflows. The API validates associations to prevent unintended deletions of dependent entities.  
-
 ## Implemented Stories:  
-- **VSS Fixes** - Enhanced video summarization capabilities by integrating NVIDIA's `/summarize` endpoint into the UI workflow, allowing users to upload videos, trigger summarization, and display results in conversations. Backend improvements include impersonation support for assistant roles and proper message persistence.  
-- **Recover Soft-Deleted Entities** - Added functionality to recover soft-deleted entities such as workspaces, agents, workflows, and tags. Includes recursive recovery and APIs for listing and restoring deleted items.  
-- **Ability to Share Utility Agents** - Enabled sharing of utility agents across workspaces without requiring workspace-level sharing. Introduced a dedicated "Utility Agent" page for better visibility and management.  
-- **Add Agents to ReactFlow Pane** - Both Chat Agents and Utility Agents are now displayed in the System Prompts ReactFlow pane for streamlined workflow management.  
-- **Restrict Nav.AI Tool Creation to Administrators** - Limited the creation of Nav.AI Tools to administrators, while users can create templates. Updated the UI to reflect these restrictions with clear, uneditable fields.  
-- **Dataset Form Validation** - Implemented validation for dataset creation forms to ensure required fields are completed before submission, reducing errors during data source creation.  
-- **Module Form Validation** - Added validation for module creation forms based on the selected provider, ensuring accurate configurations and reducing potential bugs.  
-- **Attach Files to Conversations** - Enabled users to attach files to conversations, contingent on selecting an attachment storage option during agent creation. Users can navigate to the edit screen to enable this feature if initially disabled.  
-- **Drag and Drop File Attachments** - Introduced drag-and-drop functionality for adding file attachments to conversation inputs, with click-to-upload as an alternative.  
-- **Delete Attachments from Conversations** - Added the ability to delete attachments from conversations, allowing users to maintain clean and relevant conversation histories.  
-- **Chat Export - Tables as Text** - Ensured that tables generated in chat conversations are exported as text-based tables for easy reuse.  
-- **Chat Export - Charts and Graphs in Word Files** - Enhanced chat export functionality to include charts, graphs, and other visuals in Word files, rendered as they appear in conversations.  
-- **File Store Options in Agent Forms** - Added file store configuration options in the Create/Edit Agent form, enabling attachment support during conversations. Users can select file types such as images, videos, audio, and text documents.  
+- **VSS Fixes** - Enhanced chat data handling by removing videoUUID visibility, securing backend routing, and integrating NVIDIA's summarization endpoint for video attachments. Summarization results are now processed and displayed seamlessly in conversations.  
+- **Recover functionality for workspace/agent/dataset for soft delete items** - Introduced recovery functionality for soft-deleted entities, allowing users to restore individual or recursively linked items like workspaces, agents, and workflows. Includes API endpoints for listing and restoring entities.  
+- **Ability to Share Utility Agents** - Enabled sharing of utility agents across workspaces with a dedicated "Utility Agent" page for visibility, similar to the "Super Agent" page.  
+- **Add both Chat Agents and Utility Agents to System Prompts reactflow pane** - Added Chat Agents and Utility Agents to the ReactFlow pane for streamlined visual management within workflows.  
+- **For Nav.AI Tools, only administrators should be able to create Nav.AI Tools** - Restricted Nav.AI Tool creation to administrators, while users can create templates with predefined, uneditable fields.  
+- **Implement Dataset form validation** - Applied form validation to dataset creation, ensuring users address incomplete or incorrect inputs before submission.  
+- **Recursive delete for workspace, assistant, Utility agent, agent workflow by adding APIs in "/navai/" namespace** - Implemented recursive deletion APIs for entities like workspaces, assistants, and workflows, with safeguards to prevent deletion of associated data sources or instructions.  
+- **Implement Module form Validation** - Added validation to the Create Module form, ensuring proper input based on the selected module provider using API-driven parameters.  
+- **Attach my files to conversations** - Enabled file attachments in conversations, contingent on selecting attachment storage during agent creation, with an option to modify settings if disabled.  
+- **Drag and drop my files into conversation** - Introduced drag-and-drop functionality for file attachments in conversation inputs, with click-to-upload as an alternative.  
+- **Delete my attachments from conversation** - Added the ability to delete attachments from conversations, maintaining a clean and relevant history.  
+- **Chat export files display tables as text** - Ensured chat-generated tables are exported as text-based tables for easy reuse in external files.  
+- **Chat export WORD files display charts, graphs** - Enabled accurate rendering of charts, graphs, and visuals in exported Word files, with tables included as rendered images.  
+- **Show File store options in Create/Edit Agent form** - Added file store options in the agent creation/edit form, enabling backend configuration for attachments. Supported file types include images, videos, audio, and text documents.  
 
 ## Bugs Fixed:  
-- **JSON Displays on Map Component** - Resolved an issue where JSON data was incorrectly displayed on the map component.  
-- **Soft-Deleted Datasource Referenced in Conversations** - Fixed a bug where soft-deleted data sources were still referenced in the conversation screen.  
-- **Network Call Loop on Workspace Click** - Addressed a bug causing repeated network calls when clicking on a workspace.  
-- **Hot Fix for Nav.AI Templates** - Applied a critical fix to resolve issues with Nav.AI templates.  
+- **JSON displays on map component** - Resolved an issue where JSON data was incorrectly displayed on the map component.  
+- **Modifying the Document View** - Fixed a bug affecting the document view functionality.  
+- **Soft deleting a datasource still refer to a Datasource from conversation screen** - Addressed an issue where soft-deleted data sources were still referenced in the conversation screen.  
+- **network call in a loop on click of workspace** - Fixed a bug causing repeated network calls when clicking on a workspace.  
+- **Hot fix for Nav.AI Templates** - Applied a hotfix to address issues with Nav.AI Templates.  
