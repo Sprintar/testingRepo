@@ -1,44 +1,43 @@
-## Sprint 1  
+## Release version 1  
 Release Date: 08 Sep 2025  
 
 ## Features Released:  
-- **Add Import/Export feature for all entities to BE API** - Introduced the ability to export and import system entities via an encrypted file for recovery and migration purposes. This feature is accessible through the API and supports selective entity types.  
-- **Add support for Wolfram Alpha function tools** - Enabled integration with Wolfram Alpha tools to enhance functionality within the system.  
+- **Add Import/Export feature for all entities to BE API** - Introduced functionality to export and import all system entities via API for recovery and migration purposes. Exported files are encrypted, and entity types can be selected for export.  
+- **Add support for Wolfram Alpha function tools** - Enabled integration with Wolfram Alpha function tools to enhance computational capabilities.  
 - **Agent handoffs stop workflow execution** - Improved agent workflow processing by addressing issues with agent handoffs and integrating solutions to enhance performance and metadata handling.  
 
 ## Implemented Stories:  
-- **Datasources require permission grants** - Implemented permission controls for datasources using tag filters, ensuring data access is restricted based on predefined conditions.  
-- **Add citation information to chat response** - Chat messages now include detailed citation information about the context used to generate responses, exposed via event streams and storage.  
-- **Support vLLM as module spec for LLMs** - Added support for vLLM inference APIs to optimize CUDA usage, enabling integration with existing tools like llama-index.  
-- **Implement Role Permission on Data source APIs** - Role-based permissions were added to the Data Source API, restricting actions like creation and updates based on user roles.  
+- **Datasources require permission grants** - Implemented permission controls for datasources using tag filters, ensuring data access is restricted based on predefined tags.  
+- **Add citation information to chat response** - Chat responses now include detailed citation information, exposing context retrieval details in both event streams and storage.  
+- **Support vLLM as module spec for LLMs** - Added support for vLLM inference API to optimize CUDA usage, enabling seamless integration with existing frameworks.  
+- **Implement Role Permission on Data source APIs** - Role-based permissions for data sources have been implemented, restricting actions like creation and updates based on user roles.  
+- **Dataset reference in context** - Enhanced dataset linkage and memory retention to ensure agents correctly reference datasets used during their creation.  
+- **Add filter tags to each dataset added in the background** - Introduced the ability to assign filter tags to datasets during ingestion for better data organization and access control.  
 - **Fixing the Delete API issue** - Resolved issues with deleting agents, workspaces, and system instructions, ensuring smooth operation and proper API responses.  
-- **Add loader to the Roles page** - Introduced a loader to the Roles page for better user experience during data loading.  
-- **Add loader & error handling to workspace flow** - Enhanced workspace flow with loaders for API calls and toast messages for error or success notifications.  
-- **Dataset reference in context** - Improved dataset linkage and memory retention, ensuring agents correctly reference datasets used during creation.  
-- **Add filter tags to each dataset added in the background** - Enabled users to add datasource filter tags for better data organization and retrieval.  
-- **Create Registry Asset - Dynamic text field issue** - Fixed an issue where dynamic text fields in the "Create Registry Asset" form lost focus after typing more than one character.  
+- **I don't want to be able to add where I don't have write permission** - Disabled the ability to add items in areas where users lack write permissions, improving user experience and error prevention.  
+- **Enable EQTY for Agentic Workflow** - Integrated EQTY into the backend to support agentic workflows, enhancing lineage generation and computational inference steps.  
 - **Deploy multimodal LLM to Dell box** - Deployed a multimodal LLM to the Dell box, enabling advanced capabilities for the NavAI application.  
-- **Add loader to the Nav.AI registry page** - Added a loader or skeleton to the Nav.AI registry page to indicate ongoing data loading.  
-- **Implement an endpoint to ingest Image files to the RAG** - Introduced a dedicated endpoint for ingesting image files into the RAG, enabling image content processing and integration.  
-- **Remove widgets from application section** - Removed widgets from all UI pages to streamline the interface.  
-- **New API call that fetches the version for the backend** - Created an API to fetch the latest commit hash for the backend, aiding version tracking.  
-- **Last commit version to be shown for the frontend** - Displayed the last commit hash on the frontend for better environment version visibility.  
-- **Limit the image size on the Client end - FE change** - Added client-side restrictions on image size to improve performance and usability.  
-- **Add support for Cohere** - Enabled the use of models hosted and served via Cohere within the system.  
-- **Admin should only manage roles** - Refactored the admin page to restrict role management and updates to administrators only.  
+- **Add loader to the Nav.AI registry page** - Added a loader to the Nav.AI registry page to indicate loading status and improve user experience.  
+- **Implement an endpoint to ingest image files to the RAG** - Introduced a dedicated endpoint for ingesting image files into the RAG, enabling image content processing and integration.  
+- **Remove widgets from application section** - Removed widgets from UI pages to streamline the application interface.  
+- **New API call that fetches the version for the backend** - Created an API to fetch the latest commit hash for the backend, aiding in version tracking.  
+- **Last commit version to be shown for the frontend** - Displayed the last commit hash on the frontend for quick identification of deployed versions.  
+- **Add support for Anthropic** - Enabled registration and interaction with Anthropic LLM modules like Claude 3.5 in NAV.AI.  
+- **Tools on charting functionality** - Enhanced charting functionality by addressing issues with graph types and color customization.  
+- **Edit access by permissions for workspaces and agents for all users** - Implemented permission-based edit access for workspaces and agents, ensuring role-based restrictions.  
+- **Solving the >1 replicas issue on backend** - Addressed backend scalability by synchronizing in-memory registries with the database for multi-pod deployments.  
+- **Add Tools seeder script** - Added a seeder script for tools in the deployment repository, consolidating tool prompts and improving accessibility.  
+- **Admin should only manage role and admin can only update it** - Refactored the admin page to include role-based access controls and centralized role management.  
 - **Soft Delete functionality - Workspace** - Introduced soft delete functionality for workspaces, agents, and datasets, with validation and confirmation prompts for dependent entities.  
-- **Edit access by permissions for workspaces and agents** - Implemented permission-based edit access for workspaces and agents across all users.  
-- **Solving the >1 replicas issue on backend** - Enhanced backend scalability by synchronizing in-memory registries with the database for multi-pod deployments.  
-- **Add support for Anthropic** - Added support for registering and interacting with Anthropic LLM modules like Claude 3.5 Sonnet.  
-- **Agentic workflow - Enhancement/Know issues** - Addressed known issues and introduced enhancements to the Agentic workflow UI, including better edit options and improved messaging.  
-- **Improvements to Prompt Suggestion in Create/Update Agent form** - Enhanced prompt suggestion management by allowing bulk deletion and persisting form state during updates.  
-- **Add Tools seeder script** - Added a seeder script for tools in the deployment repository and updated documentation to reflect the changes.  
-- **Font Substituting Characters Issue** - Resolved font substitution issues by replacing problematic fonts with suitable alternatives.  
-- **Fix UX on Agent Creation/Edit modal** - Improved the user experience for agent creation and editing, including better system prompts, suggestions, and confirmation dialogs.  
+- **Agentic workflow - Enhancement/Known issues** - Addressed known issues and enhancements for the Agentic workflow UI, including improved edit functionality and user feedback.  
+- **Improvements to Prompt Suggestion in Create/Update Agent form** - Enhanced prompt suggestion management by adding bulk deletion and form persistence during updates.  
+- **Add support for Cohere** - Enabled the use of models hosted and served via Cohere for enhanced AI capabilities.  
+- **Implement refresh token for Nav AI** - Added refresh token functionality to improve authentication flow and session management.  
+- **Font substituting characters issue** - Resolved font substitution issues by replacing problematic fonts with suitable alternatives.  
+- **Fix UX on Agent Creation/Edit modal** - Improved user experience for agent creation and editing, including better prompts, suggestions, and confirmation dialogs.  
 
 ## Bugs Fixed:  
-- **Investigate agent with reference data not recognizing ragged docs** - Fixed an issue where agents failed to recognize and summarize all accessible documents, including newly added ones.  
-- **Adding Dataset - Inconsistent name in the create form** - Resolved inconsistencies in dataset naming during creation.  
-- **Add button is always disabled (Workspaces and Agents)** - Fixed an issue where the "Add" button for creating workspaces and agents was always disabled.  
-- **PathTraversal - 8415cc99-d604-f011-aaa5-0022484e6819** - Addressed a path traversal vulnerability by validating and sanitizing user input to prevent unauthorized access to sensitive data.  
-- **Llama store error** - Resolved an issue with the Llama store by specifying a temporary store in the Docker file.  
+- **Investigate agent with reference data not recognizing ragged docs** - Fixed an issue where agents failed to recognize and summarize all accessible documents.  
+- **Add button is always disabled (Workspaces and Agents)** - Resolved an issue where the "Add" button for creating workspaces and agents was always disabled.  
+- **PathTraversal - 8415cc99-d604-f011-aaa5-0022484e6819** - Addressed a path traversal vulnerability by validating and sanitizing user inputs to prevent unauthorized access.  
+- **Llama store error** - Fixed an error in the Llama store by specifying a temporary store in the Docker file.  
