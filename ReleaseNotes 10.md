@@ -7,12 +7,10 @@ Release Date: 08 Sep 2025
 - **Abstract Document Parser Module** - Introduced the `DOCUMENT_PARSER` module type and the `AbstractDocumentParser` base class to standardize document parsing interfaces. Included the `DocumentElement` structure with natural reading order and full typing.  
 
 ## Implemented Stories:  
-- **Export Button - UI** - Enabled exporting agents as flat files (e.g., JSON) for migration, backup, and restore purposes. The exported file captures the full configuration of the agent and its associated entities, ensuring portability across environments.  
-- **Import API Endpoint with Preview - BE** - Released backend endpoints to support agent import functionality. `/navai/system/import?preview=true` decrypts and previews file content, while `/navai/system/import` creates agents and associated entities.  
-- **Phase 1 - Release Notes Published to Public Git** - Automated the generation and publication of release notes to a public Git repository at the end of each sprint, ensuring transparency and accessibility for stakeholders.  
-- **[P2] SPIKE: Release Branch Controls** - Documented the release process and proposed a new versioning strategy for better alignment between Git branches, Docker tags, and deployment workflows.  
-- **Alembic - Sync with Dev Environment** - Synced SQLAlchemy models with the PostgreSQL database and resolved migration issues to enable seamless use of Alembic for database schema management.  
+- **Export Button - UI** - Enabled exporting agents as flat files (e.g., JSON) for migration purposes. The exported file captures the full configuration of the agent and associated entities, ensuring portability and re-import capability.  
+- **Release Branch Controls** - Documented the release process and proposed a new versioning strategy for better management of Git branches, Docker tags, and deployment workflows.  
+- **Alembic - Sync with Dev Environment** - Synced SQLAlchemy models with the PostgreSQL database to enable seamless use of Alembic for creating and maintaining migrations. Addressed unique constraint mismatches for primary keys.  
 
 ## Bugs Fixed:  
-- **Adding Dataset - Inconsistent Name in the Create Form** - Fixed an inconsistency in the dataset creation form name.  
-- **Chat Page of Super Agent Getting Re-rendered in Infinite Loop** - Resolved an issue where the chat page of the super agent was re-rendering continuously, disrupting user interactions.  
+- **Adding Dataset - Inconsistent name in the create form** - Fixed an inconsistency in the dataset creation form name.  
+- **Chat page of super agent getting re-rendered in infinite loop** - Resolved an issue where the chat page of the super agent was re-rendering continuously, causing usability problems.  
