@@ -2,43 +2,40 @@
 Release Date: 08 Sep 2025  
 
 ## Features Released:  
-- **Enable shared memory for all agents in a network** - Shared memory access is now automatically enabled for all agents in a network, regardless of type, ensuring workflow stability by maintaining consistent state across agents.  
+- **API - CRUD for Application Level Setting** - Introduced CRUD APIs for managing application-level settings, including audit trails and restricted access for administrators. New database tables were added to support application preferences.  
+- **API - Get Modules with Default** - Enhanced module APIs to indicate default configurations for LLMs, embeddings, vector stores, and file storage, improving clarity in module selection.  
+- **API - Populate Preferences for Application Settings in DB During Startup** - Application preferences are now pre-populated in the database during startup, ensuring consistent default configurations.  
+- **API - Add Capabilities as Part of Module Spec** - Added capabilities as parameters in module specifications for LLMs, vector stores, embeddings, and file storage, enabling better customization and functionality.  
+- **API - Update Modules APIs to Include Module Capabilities in Response** - Module APIs now return detailed capabilities, improving transparency and usability for administrators.  
 
 ## Implemented Stories:  
-- **Satisfaction governance control** - Users can now provide thumbs-up or thumbs-down assessments for agent conversations, enabling performance governance through EQTY Governance Studio.  
-- **Fix Registry not Syncing Across Replicas** - Backend module registries are now synchronized across all Kubernetes pods, ensuring consistent configurations and eliminating discrepancies caused by unsynced pods.  
-- **Admin can configure default selections** - Admins can set default configurations for models, embeddings, vector stores, data sources, and attachment storage, streamlining user setup and ensuring consistency.  
-- **My agent has a default model** - Agents now automatically use a default LLM model, simplifying interactions for users unfamiliar with model selection.  
-- **My datasources have a default embedding, vector, and file store** - Datasources now default to pre-configured embeddings, vector stores, and file storage, reducing the need for manual configuration.  
-- **My storage attachment has default storage** - Conversation attachments are now automatically stored using default settings, simplifying agent interactions.  
-- **Define and Design Application Settings (Backend)** - Backend APIs, models, and data structures have been defined to support user preferences for application-level settings.  
-- **API - CRUD for Application level Setting** - New APIs allow administrators to create, update, fetch, and delete application-level settings, with audit trails and restricted access for non-admin users.  
-- **Conversation URLs are automatically added to clipboard** - Conversation URLs are now copied to the clipboard automatically when displayed, enabling quick sharing without manual actions.  
-- **Tooltip for LLM Modules** - Users can now view detailed capabilities of LLM modules via tooltips, aiding in informed module selection.  
-- **API - Get Modules with default** - Module API responses now include a "default" flag, indicating whether a module is set as default in application settings.  
-- **API - Create meta data model to support Module capabilities** - New database tables and relationships have been created to manage module capabilities and their associations.  
-- **Tool Tip for Embedding Model** - Embedding modules now display tooltips with their capabilities, improving usability for data source configuration.  
-- **Front end Unit testing for Global Chat Input Box Component** - Unit tests ensure proper rendering and functionality of the Global Chat Input Box, including default model selection, button states, and chat interactions.  
-- **Front end Unit testing for Agent and Super Agent Chat Input Box Component** - Unit tests validate the functionality of the Agent Chat Input Box, including model selection, prompt suggestions, and file upload interactions.  
-- **API - Populate preferences for application settings in DB during application startup** - Application preferences are now pre-populated in the database during startup, ensuring consistent default settings.  
-- **API - update Modules APIs to include module capabilities in response** - Module APIs now return detailed capability information for each module.  
-- **API - add capabilities as part of module spec for LLM, Embedding vector, Filestorage, vectorstore** - Module specifications now include capabilities as parameters, enhancing configurability.  
-- **Tool Tip for Vector store** - Vector store modules now display tooltips with their capabilities, aiding in data source configuration.  
-- **Tool Tip for File Store** - File store modules now display tooltips with their capabilities, improving usability for data source configuration.  
-- **Sort the conversation table and conversation history** - Users can now sort conversation history by various criteria for easier navigation.  
-- **Time stamp should be shown in Local Timezone** - Timestamps are now displayed in the user's local timezone for better clarity.  
-- **Australian context adaptation** - Australian equivalents of GDPR and EU AI Act scenarios have been added, along with an AU option in settings to drive these adaptations.  
-- **Add Sorting table in Recycle Bin page - FE** - Users can now sort columns on the Recycle Bin page for improved usability.  
-- **Add Sorting table in Shared Chat Links - FE** - Users can now sort columns on the Shared Chat Links page, excluding the shared link column.  
-- **Add Sorting table in Manage Tags & Manage Roles** - Sorting functionality has been added to the Manage Tags and Manage Roles pages for better navigation.  
-- **My Application has a default Title & default footer banner** - Applications now display a default title and footer banner set by administrators.  
+- **Satisfaction Governance Control** - Enabled thumbs-up/thumbs-down assessments for agent conversations, with performance governance controls integrated into EQTY Governance Studio.  
+- **Fix Registry Not Syncing Across Replicas** - Ensured backend module registries synchronize across all Kubernetes pods, resolving inconsistencies in multi-pod environments.  
+- **Admin Can Configure Default Selections** - Administrators can now set default configurations for models, embeddings, vector stores, data sources, and attachment storage to streamline user setup.  
+- **My Agent Has a Default Model** - Agents now automatically use a default LLM model, simplifying interactions for users unfamiliar with model selection.  
+- **My Datasources Have a Default Embedding, Vector, and File Store** - Datasources now default to pre-configured embeddings, vector stores, and file storage, reducing manual setup.  
+- **My Storage Attachment Has Default Storage** - Conversation attachments are now automatically stored using default configurations, enhancing user experience.  
+- **Define and Design Application Settings (Backend)** - Backend support for defining user preferences, designing APIs, and structuring data handshakes for application settings.  
+- **Conversation URLs Are Automatically Added to Clipboard** - Conversation URLs are now copied to the clipboard automatically when displayed, streamlining sharing.  
+- **Tooltip for LLM Modules** - Added tooltips to display LLM module capabilities, aiding users in selecting the right module for their agents.  
+- **Tooltip for Embedding Model** - Introduced tooltips for embedding modules, providing visibility into their capabilities for datasource selection.  
+- **Tooltip for Vector Store** - Added tooltips for vector stores, enabling users to view supported capabilities during datasource configuration.  
+- **Tooltip for File Store** - File store capabilities are now displayed via tooltips, assisting users in selecting appropriate configurations.  
+- **Sort the Conversation Table and Conversation History** - Users can now sort conversation history by various attributes for easier navigation.  
+- **Time Stamp Should Be Shown in Local Timezone** - Time stamps are now displayed in the user's local timezone for better contextual understanding.  
+- **Enable Shared Memory for All Agents in a Network** - Shared memory is now enabled by default for all agents in a network, ensuring workflow stability and state consistency.  
+- **Australian Context Adaptation** - Added Australian equivalents for GDPR and EU AI Act scenarios, along with an AU-specific option in settings.  
+- **Add Sorting Table in Recycle Bin Page - FE** - Sorting functionality has been added to the Recycle Bin page for improved usability.  
+- **Add Sorting Table in Shared Chat Links - FE** - Users can now sort columns on the Shared Chat Links page for better organization.  
+- **Add Sorting Table in Manage Tags & Manage Roles** - Sorting capabilities have been added to the Manage Tags and Manage Roles pages for enhanced user experience.  
+- **My Application Has a Default Title & Default Footer Banner** - Applications now display default titles and footer banners set by administrators.  
 
 ## Bugs Fixed:  
-- **Tools disappear - Update Share logic** - Resolved an issue where tools would disappear due to incorrect share logic.  
-- **Dataset upload issue for Large files** - Fixed an issue preventing large datasets from being uploaded successfully.  
-- **Invalid vllm usage causes errors** - Addressed errors caused by invalid usage of vllm.  
-- **Super Agent Console button Overlaps on Conversation history** - Fixed a UI issue where the Super Agent Console button overlapped with conversation history.  
-- **Governance Status error** - Resolved an error in governance status reporting.  
-- **Welcome messages are not fitting the screen** - Fixed a display issue where welcome messages did not fit the screen.  
-- **Validation needed to not display for regular users** - Adjusted validation logic to ensure it does not display for regular users.  
-- **Application Settings - Application Footer Banner Skeleton Issue** - Fixed a skeleton loading issue for the application footer banner.  
+- **Tools Disappear - Update Share Logic** - Resolved an issue where tools would disappear due to faulty share logic.  
+- **Dataset Upload Issue for Large Files** - Fixed an issue preventing large datasets from being uploaded successfully.  
+- **Invalid vllm Usage Causes Errors** - Addressed errors caused by invalid vllm usage.  
+- **Super Agent Console Button Overlaps on Conversation History** - Fixed overlapping UI elements in the Super Agent console.  
+- **Governance Status Error** - Resolved an error affecting governance status displays.  
+- **Welcome Messages Are Not Fitting the Screen** - Adjusted welcome message formatting to fit the screen properly.  
+- **Validation Needed to Not Display for Regular Users** - Fixed an issue where unnecessary validation messages were shown to regular users.  
+- **Application Settings - Application Footer Banner Skeleton Issue** - Corrected a skeleton loading issue for the application footer banner.  
