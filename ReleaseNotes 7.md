@@ -2,33 +2,32 @@
 Release Date: 08 Sep 2025  
 
 ## Features Released:  
-- **Super Agent Console User Experience Enhancements** - Improved the SuperAgent console's readability and usability by enhancing message stream handling, adding smooth animations, and restructuring the console overlay component. Updates include better data visualization, auto-scroll behavior, and improved component organization for a more focused and maintainable user experience.  
+- **Super Agent Console User Experience Enhancements** - Improved the Super Agent console with enhanced message stream handling, smooth animations, better data visualization, auto-scroll behavior, and a restructured component for improved readability, usability, and maintainability.  
 
 ## Implemented Stories:  
-- **SAST Integration in DevOps Pipelines** - Explored and identified the best approach to integrate a Static Application Security Testing (SAST) tool into Azure DevOps pipelines.  
-- **Consistent Terminology for Chat Agent and Super Agent** - Standardized names and terminology across navigation menus, page titles, and modal windows to improve clarity and reduce user confusion.  
-- **Export Charts and Graphs in Chat Files** - Enabled charts, graphs, and other visuals to appear in exported files exactly as they do in chat conversations, excluding MS Word exports.  
-- **Enhanced Structured Data Capabilities** - Investigated methods to improve structured data handling, including uploading, chunking, and usage in agent conversations.  
-- **Attachments UX Enhancements** - Improved the ability to attach, preview, and manage files within chat conversations for more efficient document referencing.  
-- **Filtering and Sorting Options for Entity Lists** - Added consistent filtering and sorting options to entity list views, making it easier to locate items in large datasets.  
-- **Backend Unit Tests** - Added and updated unit tests for backend modules, including recursive delete/restore, tagging, shared conversations, and agent workflows, ensuring code reliability.  
-- **Frontend Unit Testing for Home Page** - Implemented unit tests for the home page components, including rendering of welcome messages, favorites, card skeletons, and user profiles.  
-- **Allow 3 States of Handoff Relations for Agents** - Updated the UI to support three handoff states for agents: unrestricted, restricted to specific agents, or no handoff allowed.  
-- **Remove Handoff Relation Restrictions** - Enabled the removal of configured handoff relations in the UI, providing more flexibility in agent workflows.  
-- **Allow Multi-Level Agent Workflows** - Removed UI restrictions on agent workflow complexity, allowing for multi-level handoffs and more intricate configurations.  
-- **Decommission Tools, Learn Vantage, and Rename Cubes** - Removed "Tools" and "Learn Vantage" from navigation, renamed "Cubes" to "Tags," and updated all references and routes accordingly.  
-- **Configurable Frontend Settings via Environment Variables** - Enabled environment-specific configuration of frontend settings, including themes and policies, through environment variables.  
+- **Rearrange/Rename menu items for Chat Agent and Super Agent** - Updated navigation and modal terminology to ensure consistent naming and reduce user confusion.  
+- **Chat export files display charts, graphs** - Exported files now accurately display charts, graphs, and other visuals as they appear in chat conversations, excluding MS Word exports.  
+- **Attachments UX Enhancements** - Enhanced file attachment functionality in chat conversations, allowing users to efficiently attach, preview, and manage documents and images.  
+- **Add Filtering and Sorting options - where the List of cards are shown** - Introduced filtering and sorting options for list views, enabling users to locate entities more easily in large datasets.  
+- **Unit tests: Backend modules** - Added and updated unit tests for backend modules, ensuring better coverage and alignment with the latest codebase.  
+- **Allow 3 states of handoff relations for agents** - Expanded handoff relation configurations in the UI to support unrestricted, restricted, and no handoff states, aligning with backend capabilities.  
+- **Allow more than 1 level of agents** - Removed UI restrictions on agent workflow complexity, enabling multi-level agent handoffs.  
+- **Add ability to Remove handoff relations** - Introduced a visual option to remove existing handoff relations in the graph editor.  
+- **Fix alignment on icons in a card** - Improved card layout by aligning icons with text, condensing header spacing, and ensuring consistent padding.  
+- **Decommission Tools, Learn Vantage, Cubes** - Removed "Tools" and "Learn Vantage" from navigation, renamed "Cubes" to "Tags," and updated all references and routes accordingly.  
+- **Sync the Demo 1 & Demo2 NavAI tool** - Updated and synchronized NavAI tools in Demo1 and Demo2 environments, ensuring availability to all users.  
+- **Theme changes for Action Buttons** - Updated the theme for action buttons to align with the overall design.  
+- **Front end Unit testing for Home Page** - Added unit tests for Home Page components, ensuring proper rendering of user-specific elements like welcome messages, favorites, and profiles.  
 
 ## Bugs Fixed:  
-- **Graph Axis and Data Label Spacing** - Resolved issues with multiple axes and improved spacing for data labels in graphs.  
-- **Temporary Text in Agent Chat** - Fixed an issue where temporary text appeared before the final answer in agent chats.  
-- **System Prompt and Template Issue in Edit Agent Form** - Addressed inconsistencies in system prompts and templates within the Edit Agent form.  
-- **Duplicate Tools in List** - Fixed a bug causing tools to appear duplicated in lists.  
-- **i18n Copy Fixes** - Corrected internationalization (i18n) copy errors.  
-- **Home Page Hover Flicker** - Resolved a flickering issue when hovering over card titles on the home page.  
-- **Super Agent Context Forgetting** - Fixed an issue where the Super Agent occasionally forgot the context of conversations.  
-- **Share Conversation by URL in Demo Environments** - Fixed a bug preventing conversation sharing via URL in demo environments.  
-- **Agent Retaining Deleted Dataset Memory** - Resolved an issue where agents retained information from deleted datasets.  
-- **Super Agent Prompt Suggestions Overlap** - Fixed overlapping prompt suggestions in the Super Agent console.  
-- **Datasource API 502 Errors** - Addressed intermittent 502 errors in the Datasource API.  
-- **Attachment Icon Disappearing in Super Agent Console** - Fixed an issue where the attachment icon disappeared when the Super Agent console was open.  
+- **Multiple axis should be shown in graph along with spaced out data labels** - Resolved an issue where graphs did not display multiple axes or properly spaced data labels.  
+- **When user chats with Agent, temporary text appears before the final answer** - Fixed the display of temporary text during agent interactions.  
+- **System prompt & Nav AI Tools template issue in Edit Agent Form** - Addressed inconsistencies in system prompts and templates within the Edit Agent Form.  
+- **Tools duplicated in list** - Fixed an issue where tools were displayed multiple times in the list.  
+- **i18n Copy Fixes** - Corrected internationalization copy errors across the application.  
+- **Home page hover on Card title flickers the page** - Resolved a flickering issue when hovering over card titles on the Home Page.  
+- **Share convo by URL not working in demo environments** - Fixed an issue preventing conversation sharing via URL in demo environments.  
+- **Agent is reproducing information from a deleted no-reference dataset** - Resolved an issue where agents retained memory of deleted datasets.  
+- **Super Agent Interaction: Prompt suggestions overlap final answers** - Fixed overlapping prompt suggestions in Super Agent interactions.  
+- **Datasource API fails with 502 multiple times** - Addressed intermittent 502 errors in the Datasource API.  
+- **Attachment icon disappears when Super Agent console is open** - Fixed an issue where the attachment icon vanished when the Super Agent console was active.  
