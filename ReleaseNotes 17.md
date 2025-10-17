@@ -1,5 +1,5 @@
 <div align="center"">Upcoming Release Notes for <b>15 October 2025</b></div>  
-<div align="center"">Release Version: <b>Release version 2.0.0</b></div>  
+<div align="center"">Release Version: <b>2.0.0</b></div>  
 
 This communication is to notify users of NAV AI of enhancements made to the application on a biweekly basis. For questions please contact (Jason person) Jasonemail@hisemail.com.  
 _Please reference the attachment for additional photos of the features and enhancements._  
