@@ -2,34 +2,33 @@
 <div align="center">Release Version: <b>Release version 2</b></div>
 
 This communication is to notify users of NAV AI of enhancements made to the application on a biweekly basis.
-_Please reference the attachment for additional photos of the features and enhancements._
 
 **Features Released**
 - Generative Interactive Tables
-  - LLM-generated tables now render consistently with a normalized structure and preserve original data while enabling search, sorting, pagination, column visibility, copy, and CSV export. Skeleton loaders improve streaming feedback, malformed tables surface clear errors, and interactivity respects row/col spans; visual styling is allowed within fixed layout guidelines for reliable behavior.
+  - LLM-generated tables now render consistently with rich interactivity (search, sort, pagination, column toggles, copy/CSV export), glass-morphic loaders during generation, and clear error states for malformed markup; visual styles from the model are respected while data remains unaltered.
 
 **Additional Enhancements**
-- Share worksheets via secure public links.
-  - Create and copy shareable links from the Actions menu, retrieve previous shares, and rely on ownership checks and deletion safeguards for controlled access.
-- More repeatable workflows with natural-language agent selection.
-  - Workflows now route by human-readable agent names instead of database IDs, improving stability and reuse.
-- Clear delivery status for emails sent from agents.
-  - When sending emails via the function tool, conversations reflect success/failure state so users know the outcome of their request.
-- Dataset name validation prevents chat errors.
-  - UI and API validations enforce safe name lengths for datasets attached to agents, avoiding Bad Request errors and surfacing clear messages.
-- Inline previews for text and markdown attachments.
-  - Text files attached in chat display a content preview instead of a generic icon for faster verification of the right file.
+- Share worksheets publicly with a secure link.
+  - Generate, copy, and manage shareable worksheet links from the Actions menu; owners can view, update, and revoke shares, and public views show messages up to the share time with appropriate error handling if the source is removed.
+- Stable agent selection using natural language names.
+  - Workflows route to the intended agent by human-readable identifiers, improving repeatability and predictability.
+- Clear delivery status for emails sent via agents.
+  - When an agent sends email through the function tool, users receive explicit success or failure feedback from the mail server.
+- Enforced dataset name length with clear error messages.
+  - UI and APIs validate dataset names to prevent chat failures, and the message API surfaces actionable errors instead of generic 400 responses.
+- Inline previews for text and markdown attachments in chats.
+  - View the content of text files directly in the conversation to quickly confirm context and the correct attachment.
 
 **Bugs Fixed**
-- Error Loading Dataset: Internal Server Error is coming to the History section when want to edit attach file to the conversation
-  - Resolved history errors when editing attached files and fixed update failures after removing agent or super agent images; added missing validation messages when updating datasets, system prompts, visualizations, or starter prompts without selections to prevent silent failures and improve clarity.
 - Import API skips selected Nav.AI Tools during agent import
-  - Import now reliably includes all selected tools during agent import.
+  - Fixed to ensure all selected tools are correctly imported with the agent.
 - User can add deleted tags under 'Tag' section of the agent
-  - Deleted tags can no longer be re-added; tag integrity is maintained.
+  - Prevented adding previously deleted tags and aligned tag validation with expected behavior.
+- Error Loading Dataset: Internal Server Error is coming to the History section when want to edit attach file to the conversation
+  - Resolved internal server errors when editing attachments in conversation history, restored update behavior after removing icon/banner images in Super Agent and Agent, and added validation messages when updating datasets or configurations without any selection.
 - Super Agent Conversation History shows NA in Date Created column
-  - Date Created now displays correctly in conversation history.
+  - Corrected date rendering to show the actual creation date.
 - Super-agent conversation history DELETION giving 500 error
-  - Deleting conversation history no longer triggers server errors.
+  - Eliminated 500 errors when deleting conversation history entries; deletions now complete reliably.
 - Export icon in chat input need to be changed as it is confusing with worksheet icon
-  - The export icon has been updated to clearly differentiate it from the worksheet icon.
+  - Updated the export icon to a distinct visual, reducing confusion with the worksheet icon.
