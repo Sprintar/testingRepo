@@ -2,18 +2,17 @@
 <div align="center">Release Version: <b>Release version 3</b></div>
 
 This communication is to notify users of NAV AI of enhancements made to the application on a biweekly basis.
-_Please reference the attachment for additional photos of the features and enhancements._
 
 **Additional Enhancements**
-- Tag worksheets to organize and find them faster.
-  - Add or remove tags on any worksheet you can access; tags use the same model as other entities and can be listed or retrieved via the tags API.
-- Delete worksheets from conversations or from the worksheet details.
-  - Removal is immediate and clears any references in conversation flows.
-- Detach a worksheet from a chat without deleting it.
-  - Remove the link to a worksheet from a conversation while keeping the worksheet available elsewhere.
-- Tabs clearly distinguish Current Session and Worksheet views.
-  - Updated icons and visual cues make it easier to recognize and switch between open tabs.
+- Organize worksheets with tags for faster filtering and search.
+  - You can add and remove tags on any worksheet you can access; tags are also available via the API in a standard format, including GET /api/v1/tags/ and GET /api/v1/tag/{tag_id}/.
+- Delete worksheets from either the worksheet details view or directly within a conversation.
+  - Deletion removes the worksheet from the system and clears all references so it no longer appears in related conversations or UI elements.
+- Detach worksheets from chats without deleting them.
+  - Remove a worksheet’s association with a conversation while keeping the worksheet available elsewhere.
+- Tabs are now visually differentiated for quicker navigation.
+  - Current Session and Worksheet tabs feature distinct icons and styling to make entity types immediately recognizable.
 
 **Bugs Fixed**
 - Attach image on chat section Unknown error message is coming with 500 error code
-  - Resolved a server error when attaching images in chat; uploads now complete reliably with clear feedback if an issue occurs.
+  - Resolved a failure that caused image attachments in chat to return a 500 error and display an “Unknown error” message.
